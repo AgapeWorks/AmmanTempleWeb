@@ -1,0 +1,122 @@
+/* Carousel Indicators */
+.carousel-indicators li {
+    display: inline-block;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #666;
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.carousel-item .carousel-image {
+    object-fit: cover; 
+}
+.carousel-indicators .active {
+    background-color: #fff;
+}
+
+/* Carousel Fade Effect */
+.carousel-fade .carousel-inner .carousel-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+
+/* Carousel Caption at Bottom */
+/* Center Carousel Caption */
+.carousel-caption {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.5em;
+    font-weight: 300;
+    position: absolute;
+    top: 50% !important;
+    /* Center vertically */
+    left: 50% !important;
+    /* Center horizontally */
+    transform: translate(-50%, -50%) !important;
+    /* Adjust from center */
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px #651D20;
+    width: 50%;
+    animation-delay: 1.5s;
+    animation-duration: 1.5s;
+}
+
+.carousel-caption .sub-txt {
+    font-size: 14px !important;
+    margin-top: 10px;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 3px #651D20;
+}
+
+/* Responsive Caption for Smaller Devices */
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 1.2em;
+    }
+
+    .carousel-caption .sub-txt {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Image */
+.carousel-image {
+    width: 100%;
+    height: 800px !important;
+    object-fit: cover;
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+    .carousel-image {
+        height: 500px;
+    }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+    .carousel-image {
+        height: 350px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+    .carousel-image {
+        height: 250px;
+    }
+
+    .carousel-caption .sub-txt {
+        font-size: 14px;
+    }
+}
+.carousel-item:nth-child(odd) .carousel-image {
+    animation: zoomIn 8s ease-in-out infinite;
+}
+
+.carousel-item:nth-child(even) .carousel-image {
+    animation: zoomOut 8s ease-in-out infinite;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
