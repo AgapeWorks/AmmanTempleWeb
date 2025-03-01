@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <div class="container-fluid p-0 main-content">
+    <div class="container-fluid p-0 main-content" id="site-wrapper">
         <header class="px-5  home-hdr">
             <section class="custom-section">
                 <div class="custom-container">
@@ -131,26 +131,46 @@
                         </nav>
 
                     </div>
-                    <div class="toogle-btn text-white">
+                    <div class="toggle-nav toogle-btn text-white">
                         <i class="fa-solid fa-bars"></i>
                     </div>
-                    <a href="#" class="toggle-nav toogle-btn text-white">
-                        <i class="fa-solid fa-bars"></i>
-                    </a>
-
                     <div id="off-canvas-menu">
-                        <div class="off-canvas-menu-container">
-                            <a href="#" class="toggle-nav">
-                                <i class="fa-solid fa-xmark"></i>
-                            </a>
-                            <h2>Navigation</h2>
-                            <p class="lead">Put your navigation links here...</p>
-                            <p>Some sample text can go here</p>
-
-                            <ul>
-                                <li>Here's an</li>
-                                <li>Unordered</li>
-                                <li>List of items</li>
+                        <div class="off-canvas-menu-container pt-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="custom-widget">
+                                    <a href="index.html" class="custom-logo-link">
+                                        <img class="custom-logo-image" src="images/logo.png" alt="Uvari_Sri_Suyambulingaswami"
+                                            width="500" height="500">
+                                    </a>
+                                </div>
+                                <div href="#" class="toggle-nav close-toogle"> 
+                                    <span class="p">Close</span><i class="fa-solid fa-xmark ps-2"></i>
+                                </div>
+                            </div>
+                            <ul class="offcanvas-nav-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li>
+                                    <a href="#">Services</a>
+                                    <ul class="offcanvas-sub-menu">
+                                        <li><a href="PoojaService.html">Pooja
+                                                Services</a></li>
+                                        <li><a href="TempleService.html">Temple
+                                                Services</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">News</a>
+                                    <ul class="offcanvas-sub-menu">
+                                        <li><a href="FutureEvent.html">Future Events</a></li>
+                                        <li><a href="PastEvent.html">Past Events</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="Gallery.html">Gallery</a></li>
+                                <li><a href="PlanVisit.html">Plan a Visit</a></li>
+                                <li><a href="Volunteers.html">Volunteers</a></li>
+                                <li><a href="">About</a></li>
+                                <li><a href="Media.html">Media</a></li>
+                                <li><a href="">Members</a></li>
                             </ul>
                         </div>
                     </div>
@@ -223,15 +243,133 @@
                 </div>
 
             </section>
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-lg-5 col-12">
+                        <div class="image-container">
+                            <img src="images/logo1.png" alt="Temple" class="main-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-12">
+                        <div class="ms-5">
+                            <section class="temple-section text-center">
+                                <div class="container">
+                                    <h2 class="temple-heading">ॐ மண்டபபிடி அம்மன் துனைவீந் கெளமாரி பராசக்தி பரம்பொருளே,
+                                        அனுக்ரஹம் தரும் அருள் வடிவே, சக்தியின் மகிமையாம் தேவியே!</h2>
+                                    <div class="temple-subheading d-flex align-items-center">
+                                        <hr class="flex-grow-1">
+                                        <span class="mx-2">|| ॐ சக்தி ஓம் ||</span>
+                                        <hr class="flex-grow-1">
+                                    </div>                                    
+                                    <p class="temple-description">
+                                        உலகிற்கு கருணை புரியும், தன்னைத் தேடும் பக்தர்களுக்கு அருள் வழங்கும், மண்டபபிடி அம்மனை நான் வணங்குகிறேன்.
+                                    </p>
+                            
+                                    <!-- Bootstrap Responsive Image Grid -->
+                                    <div class="row justify-content-center">
+                                        <div class="col-6 col-sm-4 col-md-3 mb-3">
+                                            <img loading="lazy" decoding="async" width="564" height="752" src="images/amman.jpg" class="temple-img" alt="" srcset="images/amman.jpg 564w, images/amman.jpg 225w, images/amman.jpg 370w, images/amman.jpg 410w" sizes="auto, (max-width: 600px) 100vw, 564px">
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-3 mb-3">
+                                            <img src="images/Mandapapidi Amman.jpg" class="img-fluid temple-img" alt="Temple Image 2">
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-3 mb-3">
+                                            <img src="images/kovilfront.jpg" class="img-fluid temple-img" alt="Temple Image 3">
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-3 mb-3">
+                                            <img src="images/sivan.jpg" class="img-fluid temple-img" alt="Temple Image 4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
+        <section class="newsletter-section parallax">
+            <div class="newsletter-overlay">
+                <h2 class="newsletter-title">Join the Temple Mailing List</h2>
+                <p class="newsletter-description">
+                    Get updates on upcoming events, Hindu holidays, and special occasions.
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        <footer class="custom-footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo and About -->
+                    <div class="col-md-3 footer-section">
+                                <img class="custom-logo-image" src="images/logo.png"
+                                    alt="Mandaba Pidi Amman" width="500" height="500">
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-md-3 footer-section">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footer-section">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Media & Contact -->
+                    <div class="col-md-3 footer-section">
+                        <div>
+                            <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.629293179503!2d77.8967484!3d8.2862907!2m
+        3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04805dfaa55145%3A0xebcfb9e62e50719f!2sArulmigu%20Suyambulinga
+        %20Swamy%20Temple%2C%20Uvari!5e0!3m2!1sen!2sin!4v1708185407044!5m2!1sen!2sin" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        <p class="footer-text">Email: support@example.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Mandaba Pidi Amman Thirukovil. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
     <script src="js/Custom.js"></script>
     <script>
-        $('.toggle-nav').click(function () {
-            $('#site-wrapper').toggleClass('show-nav');
+        document.addEventListener("DOMContentLoaded", function () {
+            let toggleNav = document.querySelectorAll(".toggle-nav");
+            let siteWrapper = document.getElementById("site-wrapper");
+    
+            toggleNav.forEach(function (navButton) {
+                navButton.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    siteWrapper.classList.toggle("show-nav");
+                });
+            });
         });
-
-    </script>
+    </script>    
+    
 </body>
 
 </html>
