@@ -15,10 +15,10 @@
     padding: 0;
   }
   
-  button {
-    background-color: var(--primary-color);
-    color: white;
-    font-family: var(--font-family);
+  .btn {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+    font-family: var(--font-family) !important;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -36,7 +36,13 @@
     border-radius: 0;
     box-shadow: none;
 }
-
+a, p, span {
+    font-family: 'Sofia', sans-serif;
+}
+p{
+    font-size: 20px !important;
+    color: var(--text-color) !important;
+}
 .home-hdr{
     position: absolute;
     z-index: 8000;
@@ -99,7 +105,7 @@
 
 .home-hdr .custom-section .custom-container .custom-menu .custom-nav .custom-nav-menu > li > a {
     text-decoration: none;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 18px;
     padding: 10px 15px;
     display: inline-block;
@@ -140,7 +146,7 @@
 
 .custom-sub-menu li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 18px;
     display: block;
     padding: 8px 12px;
@@ -179,8 +185,8 @@
     font-size: 16px;
     cursor: pointer;
     border: 0.5px solid #939393;
-    background-color: transparent;
-    color: var(--primary-color);
+    background-color: transparent !important;
+    color: var(--primary-color) !important;
     border-radius: 50px;
 }
 
@@ -197,14 +203,14 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    fill: #FFFFFF;
-    color: #FFFFFF;
+    fill: var(--secondary-color);
+    color: var(--secondary-color);
     background-color: var(--primary-color);
     border-radius: 0px 0px 0px 0px;
     padding: 15px 15px 15px 15px;
 }
 .page-header{
-    color: #FFFFFF;
+    color: var(--secondary-color);
     background-color: var(--primary-color);
 }
 .toogle-btn{
@@ -276,12 +282,12 @@
     width: 100%;
     padding: 40px;
     text-align: center;
-    color: white;
+    color: var(--secondary-color);
 }
 
 .off-canvas-menu-container h2 {
     margin-bottom: 20px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 10px;
 }
 
@@ -295,7 +301,7 @@
 }
 
 .off-canvas-menu-container a {
-    color: white;
+    color: var(--secondary-color);
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
@@ -306,7 +312,7 @@
    
     font-size: 30px;
     cursor: pointer;
-    color: white;
+    color: var(--secondary-color);
 }
 .offcanvas-nav-menu {
     list-style: none;
@@ -342,7 +348,7 @@
 
 /* Footer Styling */
 .custom-footer {
-    color: #FFFFFF;
+    color: var(--secondary-color);
     background-color: var(--primary-color);
     padding-top: 40px;
     text-align: center;
@@ -379,7 +385,7 @@
 }
 
 .footer-links a:hover {
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 .social-icons a {
@@ -390,12 +396,12 @@
 }
 
 .social-icons a:hover {
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 /* Copyright Section */
 .footer-bottom {
-    color: #FFFFFF;
+    color: var(--secondary-color);
     background-color: var(--primary-color);
     padding: 10px;
     text-align: center;
@@ -403,5 +409,5 @@
 }
 
 .footer-bottom span {
-    color: #fff;
+    color: var(--secondary-color);
 }
