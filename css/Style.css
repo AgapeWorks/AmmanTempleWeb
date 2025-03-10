@@ -710,7 +710,7 @@
     }
   }
 
-  .map-frame {
+  .contact-map {
     width: 100%; /* Full width of the container */
     height: 600px; /* Set a reasonable height */
     border: 0; /* Remove iframe border */
@@ -718,13 +718,43 @@
 
 /* Adjust height for smaller screens */
 @media (max-width: 768px) {
-    .map-frame {
+    .contact-map {
         height: 300px;
     }
 }
 
 @media (max-width: 480px) {
-    .map-frame {
+    .contact-map {
         height: 250px;
     }
 }
+
+.event-container{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.event-temple{
+    border-color: #651D20 !important;
+    box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, .5);
+}
+
+.event-name{
+    text-decoration: none;
+}
+.evt-img{
+    height: auto;
+    max-height: 400px;
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.service-card{
+    min-height: 150px;
+  }
+
+  .service-footer {
+    background-color: transparent !important;
+    border: none !important;
+  }
