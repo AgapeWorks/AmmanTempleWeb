@@ -968,10 +968,19 @@
     transform: scale(1.1);
   }
 
+  @media (max-width: 1200px) {
+    .thum{
+      display: none;
+    }
+    .help_content{
+      position: relative !important;
+      left: 0 !important;
+    }
+  }
+
   .latest_activites_area {
     background: #651d200f;
     position: relative;
-    max-height: 700px;
     border-radius: 15px;
   }
   
@@ -979,7 +988,8 @@
   .latest_activites_area .video_activite {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0;    
+    max-height: 700px;
     width: 50%;
     bottom: 0;
   }
@@ -1011,7 +1021,7 @@
   
   /* line 45, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_latest_activites.scss */
   .latest_activites_area .activites_info {
-    padding-bottom: 226px;
+    padding-bottom: 20px;
   }
   
   @media (max-width: 767px) {

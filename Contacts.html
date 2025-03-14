@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Temple</title>
-    <link rel="icon" type="image/x-icon" href="images/siva-logo.png">
+    <link rel="icon" type="image/x-icon" href="images/logo2.png">
 
     <link property="stylesheet" rel="stylesheet" href="css/Site.css" type="text/css" media="all">
     <link property="stylesheet" rel="stylesheet" href="css/Style.css" type="text/css" media="all">
@@ -80,23 +80,40 @@
 
                                 <div class="ps-2 custom-column custom-audio">
                                     <audio id="audioPlayer" src="Audio/Amman Song.mp3"></audio>
-
-                                    <button id="playButton"><i class="fas fa-play"></i></button>
-                                    <button id="pauseButton" style="display: none;"><i
-                                            class="fas fa-pause"></i></button>
-
+                                
+                                    <div id="floatingPlayer">
+                                        <div class="player-controls">
+                                            <button id="closeButton"><i class="fas fa-times"></i></button>
+                                            <div class="album-art"></div>
+                                            <div class="track-info">
+                                                <h4 id="trackTitle">Amman Song</h4>
+                                                <div class="progress-container" id="progressContainer">
+                                                    <div class="progress-bar" id="progressBar"></div>
+                                                </div>
+                                            </div>
+                                            <button id="playButton"><i class="fas fa-play"></i></button>
+                                            <button id="pauseButton" style="display: none;"><i class="fas fa-pause"></i></button>
+                                        </div>
+                                    </div>
                                     <script>
                                         var audioPlayer = document.getElementById('audioPlayer');
                                         var playButton = document.getElementById('playButton');
                                         var pauseButton = document.getElementById('pauseButton');
+                                        var progressBar = document.getElementById('progressBar');
+                                        var albumArt = document.querySelector('.album-art');
+
+                                        closeButton.onclick = function () {
+                                            audioPlayer.pause();
+                                            floatingPlayer.style.display = 'none';
+                                        };
 
                                         // Autoplay after user interaction
                                         window.onload = function () {
                                             document.addEventListener('click', function handleUserInteraction() {
                                                 audioPlayer.play().then(() => {
-                                                    console.log("Autoplay started after user interaction.");
                                                     playButton.style.display = 'none';
                                                     pauseButton.style.display = 'inline-block';
+                                                    albumArt.style.animationPlayState = 'running';
                                                 }).catch(function (error) {
                                                     console.log("Autoplay was blocked:", error);
                                                 });
@@ -109,6 +126,7 @@
                                             audioPlayer.play();
                                             playButton.style.display = 'none';
                                             pauseButton.style.display = 'inline-block';
+                                            albumArt.style.animationPlayState = 'running';
                                         };
 
                                         // Pause Button
@@ -116,12 +134,20 @@
                                             audioPlayer.pause();
                                             pauseButton.style.display = 'none';
                                             playButton.style.display = 'inline-block';
+                                            albumArt.style.animationPlayState = 'paused';
                                         };
 
                                         // Handle audio end (reset buttons)
                                         audioPlayer.onended = function () {
                                             pauseButton.style.display = 'none';
                                             playButton.style.display = 'inline-block';
+                                            albumArt.style.animationPlayState = 'paused';
+                                        };
+
+                                        // Update progress bar
+                                        audioPlayer.ontimeupdate = function () {
+                                            var progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                                            progressBar.style.width = progress + '%';
                                         };
                                     </script>
                                 </div>
