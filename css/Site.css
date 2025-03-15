@@ -24,6 +24,14 @@
     border-radius: 5px;
     cursor: pointer;
   }
+  .btn a{
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+  .btn a:hover{
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
   
   button:hover , .btn:hover {
     background-color: var(--secondary-color);
