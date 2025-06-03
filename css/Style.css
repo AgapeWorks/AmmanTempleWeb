@@ -43,6 +43,10 @@
     animation-duration: 1.5s;
 }
 
+.carousel-caption span{
+  color: #3cffb0;
+}
+
 .carousel-caption .sub-txt {
     font-size: 14px !important;
     margin-top: 10px;
